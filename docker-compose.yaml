@@ -1,0 +1,12 @@
+version: '4.28'
+
+services:
+  db_Telebot:
+    container_name: db_Telebot
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=db_Telebot
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_USER=admin
+    image: postgres:16.2-alpine3.19
